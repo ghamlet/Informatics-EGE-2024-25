@@ -38,27 +38,3 @@ for x in range(1, 111):
         A.remove(x)
 
 print(A[-1] - A[0])
-
-
-
-#-----------------------------------------------
-# 2) Вариант
-
-def f(x):
-    P = 15 <=x<= 40   
-    Q = 21 <=x<= 62
-    A = a1 <=x<= a2   
-
-    return P <= ((Q and (not(A))) <= (not(P)))
-
-
-min_len_otr = float("inf")     # + бесконечность для поиска минимального числа
-m = []
-
-for a1 in range(1, 66):
-    for a2 in range(a1, 66):
-        if all(f(x) for x in range(1, 66)):
-            min_len_otr = min(min_len_otr, a2 - a1)
-            
-        
-print(min_len_otr)
