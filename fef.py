@@ -1,5 +1,13 @@
-n = "123153513"
+from itertools import *
+
+for i in range(1, 5):
+    # print(list(product("01", repeat=i)))
+    m = [''.join(x) for x in product("01", repeat=i)]
+    print(*m)
 
 
-dec = sum([int(s) * 8**i for i, s in enumerate(n[::-1])])
-print(dec)
+"""                 0                        1
+            00                   01          10         11
+    000          001         010     011       100 101  110 111
+0000   0001    0010 0011   0100         0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111
+"""
