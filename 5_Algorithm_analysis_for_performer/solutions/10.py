@@ -34,3 +34,4 @@ for n in range(100_000, 1_000_000):
     if R == 1519 and n[-2] == "9" and "2" in n:
         print(n)
         break
+    
