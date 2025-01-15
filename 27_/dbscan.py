@@ -20,6 +20,7 @@ def dbscan_naive(P, eps, m, distance):
     def expand_cluster(p, neighbours):
         if C not in clusters:
             clusters[C] = []
+            
         clusters[C].append(p)
         clustered_points.add(p)
         while neighbours:
@@ -40,6 +41,7 @@ def dbscan_naive(P, eps, m, distance):
             continue
         visited_points.add(p)
         neighbours = region_query(p)
+        
         if len(neighbours) < m:
             clusters[NOISE].append(p)
         else:
@@ -52,19 +54,13 @@ def dbscan_naive(P, eps, m, distance):
 
 if __name__ == "__main__":
     
-    f = open("27_/27B_18056.txt")
+    f = open("27_/19567/27.13.B_19567.txt")
     trash_data = f.readline()
     
     STARS = [tuple(map(float, (line.replace(",", ".").split()))) for line in f]    
     
     
-    
-    # P = [(random.randn()/6, random.randn()/6) for i in range(150)]
-    # P.extend([(random.randn()/4 + 2.5, random.randn()/5) for i in range(150)])
-    # P.extend([(random.randn()/5 + 1, random.randn()/2 + 1) for i in range(150)])
-    # P.extend([(i/25 - 1, + random.randn()/20 - 1) for i in range(100)])
-    # P.extend([(i/25 - 2.5, 3 - (i/50 - 2)**2 + random.randn()/20) for i in range(150)])
-    # print(P)
+   
     
     colors="bgry"
     
