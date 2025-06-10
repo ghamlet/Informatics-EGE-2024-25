@@ -31,7 +31,7 @@ for i in range(0, 10**9, 3952):
 # digits = "0123456789"
 # m = [""]
 
-# for i in range(5):
+# for i in range(5):дадададдажвзкждажажа
 #     for p in product("0123456789",repeat=i):
 #         c = "".join(p)
 #         m.append(c)
